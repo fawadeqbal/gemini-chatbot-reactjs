@@ -1,5 +1,7 @@
 .header {
   color: #0d7a5a;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 body, html {
@@ -15,17 +17,16 @@ body, html {
   padding: 20px;
   border: 1px solid #ddd;
   border-radius: 5px;
-  box-sizing: border-box; /* Ensure padding doesn't affect overall size */
+  box-sizing: border-box;
 }
 
-.chat-container h2 {
-  text-align: center;
-  margin-bottom: 20px;
+.message-list-container {
+  flex: 1;
+  overflow-y: auto; /* Scrollable if content overflows */
+  margin-bottom: 10px; /* Space between messages and input */
 }
 
 .message-list {
-  flex: 1;
-  overflow-y: auto; /* Scrollable if content overflows */
   padding: 0;
   margin: 0;
   list-style: none;
@@ -50,7 +51,11 @@ body, html {
 .message-input {
   display: flex;
   align-items: center;
-  padding-top: 10px; /* Space above input area */
+  padding-top: 10px;
+  position: sticky;
+  bottom: 0;
+  background-color: white;
+  padding-bottom: 10px;
 }
 
 .message-input input {
