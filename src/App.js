@@ -70,7 +70,6 @@ function App() {
   return (
     <div className="chat-container">
       <h2 className='header'>Chat with Gemini</h2>
-      <h3>Fawad Iqbal</h3>
       <div className="message-list-container">
         <ul className="message-list">
           {messages.map((message, index) => (
