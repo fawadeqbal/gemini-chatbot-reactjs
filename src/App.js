@@ -15,7 +15,7 @@ function App() {
     const apiKey = "AIzaSyA8nr9Sxcfj3UQIdjd1t588Oil4OzWWcAA"; // Ensure to use environment variables for security
     if (apiKey) {
       const genAI = new GoogleGenerativeAI(apiKey);
-      const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
+      const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash', systemInstruction: "What is a test case (Test Case Designing,Characteristics of good test case,example),sources of information for test case,testing activities,Test levels, Verification vs Validation VModel ,white-box and black box testing", });
       setChat(model.startChat({
         history: [],
       }));
